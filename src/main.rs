@@ -18,11 +18,7 @@ fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
     commands.spawn((
         SpriteBundle {
             texture: asset_server.load("crab.png"),
-            transform: Transform::from_scale(Vec3 {
-                x: 0.05,
-                y: 0.05,
-                z: 1.0,
-            }),
+            transform: Transform::from_scale(Vec3::splat(0.05) ),
             ..default()
         },
         Player { speed: 200.0 },
